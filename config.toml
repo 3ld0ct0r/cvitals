@@ -1,0 +1,247 @@
+baseURL = "https://YOUR_SITE.example.invalid/"
+languageCode = "en"
+title = "YOUR_NAME | Resume"
+theme = "cvnewtheme"
+disableKinds = ["taxonomy", "term", "rss"]
+
+[params]
+author = "YOUR_NAME"
+description = "Replace this text with a concise professional summary."
+
+[params.seo]
+canonical = "https://YOUR_SITE.example.invalid/"
+robots = "noindex, nofollow"
+personName = "YOUR_NAME"
+personJobTitle = "YOUR_ROLE"
+ogImage = "assets/images/avatar.svg"
+keywords = ["YOUR_SPECIALTY", "YOUR_DOMAIN"]
+
+[params.profile]
+enable = true
+name = "YOUR_NAME"
+tagline = "YOUR_ROLE | YOUR_SPECIALTY"
+
+[params.contact]
+enable = true
+location = "YOUR_CITY, YOUR_COUNTRY"
+
+[[params.contact.list]]
+icon = "fas fa-envelope"
+url = "mailto:YOUR_EMAIL@example.invalid"
+text = "YOUR_EMAIL@example.invalid"
+
+[[params.contact.list]]
+icon = "fas fa-globe"
+url = "https://YOUR_SITE.example.invalid/"
+text = "YOUR_WEBSITE"
+
+[params.summary]
+enable = true
+
+[[params.summary.list]]
+
+[[params.summary.list.items]]
+text = "Replace this item with a concise overview of your experience and professional scope."
+
+[[params.summary.list.items]]
+text = "Replace this item with the kinds of systems, products, or teams you have worked with."
+
+[[params.summary.list]]
+
+[[params.summary.list.items]]
+text = "Replace this item with one or two representative outcomes supported by evidence."
+
+[[params.summary.list.items]]
+text = "Replace this item with the role, opportunity, or collaboration you are seeking."
+
+[params.experience]
+enable = true
+
+[[params.experience.list]]
+title = "YOUR_ROLE_1"
+dates = "START_DATE_1 - END_DATE_1"
+company = "YOUR_COMPANY_1"
+location = "YOUR_CITY_1, YOUR_COUNTRY_1"
+details = "Replace this text with the purpose, scope, and responsibilities of this role."
+
+[[params.experience.list.items]]
+details = "Replace this item with the first measurable result from this role."
+
+[[params.experience.list.items]]
+details = "Replace this item with a second result, technical contribution, or leadership outcome."
+
+[[params.experience.list.items]]
+details = "Replace this item with the scale, reliability, cost, quality, or delivery impact."
+
+[[params.experience.list]]
+title = "YOUR_ROLE_2"
+dates = "START_DATE_2 - END_DATE_2"
+company = "YOUR_COMPANY_2"
+location = "YOUR_CITY_2, YOUR_COUNTRY_2"
+details = "Replace this text with the purpose, scope, and responsibilities of this earlier role."
+
+[[params.experience.list.items]]
+details = "Replace this item with the first measurable result from the earlier role."
+
+[[params.experience.list.items]]
+details = "Replace this item with a second result, technical contribution, or leadership outcome."
+
+[[params.experience.list.items]]
+details = "Replace this item with the scale, reliability, cost, quality, or delivery impact."
+
+[[params.experience.list]]
+title = "YOUR_ROLE_3"
+dates = "START_DATE_3 - END_DATE_3"
+company = "YOUR_COMPANY_3"
+location = "YOUR_CITY_3, YOUR_COUNTRY_3"
+details = "Replace this text with the purpose, scope, and responsibilities of another relevant role."
+
+[[params.experience.list.items]]
+details = "Replace this item with the first measurable result from this role."
+
+[[params.experience.list.items]]
+details = "Replace this item with a second result, technical contribution, or leadership outcome."
+
+[[params.experience.list.items]]
+details = "Replace this item with the scale, reliability, cost, quality, or delivery impact."
+
+[params.projects]
+enable = true
+
+[[params.projects.list]]
+title = "YOUR_PROJECT_1"
+meta = "YOUR_PROJECT_TYPE_1"
+tagline = "Replace this text with the problem, your contribution, and the result of this project."
+
+[[params.projects.list]]
+title = "YOUR_PROJECT_2"
+meta = "YOUR_PROJECT_TYPE_2"
+tagline = "Replace this text with the problem, your contribution, and the result of another project."
+
+[params.information]
+enable = true
+
+[[params.information.list]]
+title = "YOUR_INFORMATION_GROUP_1"
+details = "Replace this text with a short introduction to the first information group."
+
+[[params.information.list.items]]
+details = "Replace this item with the first supporting detail."
+
+[[params.information.list.items]]
+details = "Replace this item with the second supporting detail."
+
+[[params.information.list]]
+title = "YOUR_INFORMATION_GROUP_2"
+details = "Replace this text with a short introduction to the second information group."
+
+[[params.information.list.items]]
+details = "Replace this item with the first supporting detail."
+
+[[params.information.list.items]]
+details = "Replace this item with the second supporting detail."
+
+[params.skills]
+enable = true
+
+[[params.skills.list]]
+title = "YOUR_SKILL_GROUP_1"
+
+[[params.skills.list.items]]
+details = "YOUR_SKILL_1A. YOUR_SKILL_1B. YOUR_SKILL_1C."
+
+[[params.skills.list.items]]
+details = "YOUR_SKILL_1D. YOUR_SKILL_1E. YOUR_SKILL_1F."
+
+[[params.skills.list]]
+title = "YOUR_SKILL_GROUP_2"
+
+[[params.skills.list.items]]
+details = "YOUR_SKILL_2A. YOUR_SKILL_2B. YOUR_SKILL_2C."
+
+[[params.skills.list.items]]
+details = "YOUR_SKILL_2D. YOUR_SKILL_2E. YOUR_SKILL_2F."
+
+[[params.skills.list]]
+title = "YOUR_SKILL_GROUP_3"
+
+[[params.skills.list.items]]
+details = "YOUR_SKILL_3A. YOUR_SKILL_3B. YOUR_SKILL_3C."
+
+[[params.skills.list.items]]
+details = "YOUR_SKILL_3D. YOUR_SKILL_3E. YOUR_SKILL_3F."
+
+[params.education]
+enable = true
+
+[[params.education.list]]
+degree = "YOUR_DEGREE_1"
+university = "YOUR_INSTITUTION_1"
+dates = "START_YEAR_1 - END_YEAR_1"
+
+[[params.education.list]]
+degree = "YOUR_DEGREE_2"
+university = "YOUR_INSTITUTION_2"
+dates = "START_YEAR_2 - END_YEAR_2"
+
+[params.certifications]
+enable = true
+
+[[params.certifications.list]]
+name = "YOUR_CERTIFICATION_1"
+body = "YOUR_ISSUER_1"
+date = "YOUR_YEAR_1"
+
+[[params.certifications.list]]
+name = "YOUR_CERTIFICATION_2"
+body = "YOUR_ISSUER_2"
+date = "YOUR_YEAR_2"
+
+[params.awards]
+enable = true
+
+[[params.awards.list]]
+name = "YOUR_AWARD_1"
+body = "YOUR_AWARDING_ORGANIZATION_1"
+date = "YOUR_AWARD_YEAR_1"
+
+[[params.awards.list]]
+name = "YOUR_AWARD_2"
+body = "YOUR_AWARDING_ORGANIZATION_2"
+date = "YOUR_AWARD_YEAR_2"
+
+[params.languages]
+enable = true
+
+[[params.languages.list]]
+name = "YOUR_LANGUAGE_1"
+level = "YOUR_LEVEL_1"
+
+[[params.languages.list]]
+name = "YOUR_LANGUAGE_2"
+level = "YOUR_LEVEL_2"
+
+[params.interests]
+enable = true
+
+[[params.interests.list]]
+name = "YOUR_INTEREST_1"
+
+[[params.interests.list]]
+name = "YOUR_INTEREST_2"
+
+[[params.interests.list]]
+name = "YOUR_INTEREST_3"
+
+[params.social]
+enable = true
+
+[[params.social.list]]
+icon = "fab fa-linkedin"
+url = "https://YOUR_PROFILE.example.invalid/"
+title = "YOUR_PROFESSIONAL_PROFILE"
+
+[[params.social.list]]
+icon = "fab fa-github-square"
+url = "https://YOUR_CODE_PROFILE.example.invalid/"
+title = "YOUR_CODE_PROFILE"

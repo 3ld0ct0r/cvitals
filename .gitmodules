@@ -1,0 +1,4 @@
+[submodule "themes/cvnewtheme"]
+	path = themes/cvnewtheme
+	url = ../cvnewtheme
+	branch = dev
