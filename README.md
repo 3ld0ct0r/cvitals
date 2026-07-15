@@ -6,6 +6,35 @@ Replace every `YOUR_...` value before publishing real content. Keep `params.seo.
 
 Choose one repository-visibility workflow: sections 1 and 2 publish public GitHub repositories, while section 3 keeps both GitHub repositories private. Do not run both publication workflows for the same prepared folders.
 
+## Contents
+
+- [Preview](#preview)
+- [1. Clone and verify the public repositories](#1-clone-and-verify-the-public-repositories)
+- [2. Publish these prepared `/tmp` repositories to GitHub once](#2-publish-these-prepared-tmp-repositories-to-github-once)
+- [3. Alternative: use private GitHub repositories and a private theme submodule](#3-alternative-use-private-github-repositories-and-a-private-theme-submodule)
+- [4. Add `cvnewtheme` as a submodule to another Hugo site](#4-add-cvnewtheme-as-a-submodule-to-another-hugo-site)
+- [5. Replace placeholders and exercise the repeatable layout](#5-replace-placeholders-and-exercise-the-repeatable-layout)
+- [6. Build and take desktop and mobile screenshots](#6-build-and-take-desktop-and-mobile-screenshots)
+- [7. Deploy public `cvitals` from GitHub to Netlify](#7-deploy-public-cvitals-from-github-to-netlify)
+- [8. Publish and consume future theme changes](#8-publish-and-consume-future-theme-changes)
+- [9. Troubleshooting](#9-troubleshooting)
+
+## Preview
+
+These checked-in screenshots show the generic repeated fixtures before any personal information is added. Select either image to open it at full resolution.
+
+### Desktop — 1440 × 1200 viewport
+
+<a href="docs/screenshots/cvitals-desktop-1440x1200.png">
+  <img src="docs/screenshots/cvitals-desktop-1440x1200.png" alt="Desktop preview of the placeholder cvitals site" width="900">
+</a>
+
+### Mobile — 390 × 844 viewport
+
+<a href="docs/screenshots/cvitals-mobile-390x844.png">
+  <img src="docs/screenshots/cvitals-mobile-390x844.png" alt="Mobile preview of the placeholder cvitals site" width="300">
+</a>
+
 ## 1. Clone and verify the public repositories
 
 Use this procedure on a fresh machine after both GitHub repositories are public. The destination paths must not already exist.
