@@ -1,5 +1,5 @@
 [build]
-command = "hugo --gc --minify --baseURL \"$URL\""
+command = "hugo --gc --minify --panicOnWarning --baseURL \"$URL\""
 publish = "public"
 
 [build.environment]
@@ -7,7 +7,7 @@ HUGO_VERSION = "0.164.0"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
-command = "hugo --gc --minify --baseURL \"$DEPLOY_PRIME_URL\""
+command = "hugo --gc --minify --panicOnWarning --baseURL \"$DEPLOY_PRIME_URL\""
 
 [context.branch-deploy]
-command = "hugo --gc --minify --baseURL \"$DEPLOY_PRIME_URL\""
+command = "hugo --gc --minify --panicOnWarning --baseURL \"$DEPLOY_PRIME_URL\""

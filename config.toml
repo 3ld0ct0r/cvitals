@@ -1,5 +1,5 @@
 baseURL = "https://YOUR_SITE.example.invalid/"
-languageCode = "en"
+locale = "en"
 title = "YOUR_NAME | Resume"
 theme = "cvnewtheme"
 disableKinds = ["taxonomy", "term", "rss"]
@@ -21,19 +21,44 @@ enable = true
 name = "YOUR_NAME"
 tagline = "YOUR_ROLE | YOUR_SPECIALTY"
 
-[params.contact]
-enable = true
-location = "YOUR_CITY, YOUR_COUNTRY"
+[params.resumeLinks]
+header = ["online_cv", "website", "location"]
+actions = ["online_cv", "email", "linkedin", "github"]
 
-[[params.contact.list]]
-icon = "fas fa-envelope"
-url = "mailto:YOUR_EMAIL@example.invalid"
-text = "YOUR_EMAIL@example.invalid"
+[params.resumeLinks.items.online_cv]
+kind = "online-cv"
+url = "https://YOUR_SITE.example.invalid/"
+text = "Online CV"
+label = "View online CV"
 
-[[params.contact.list]]
-icon = "fas fa-globe"
+[params.resumeLinks.items.website]
+kind = "website"
 url = "https://YOUR_SITE.example.invalid/"
 text = "YOUR_WEBSITE"
+label = "Visit website"
+
+[params.resumeLinks.items.location]
+kind = "location"
+text = "YOUR_CITY, YOUR_COUNTRY"
+label = "Location: YOUR_CITY, YOUR_COUNTRY"
+
+[params.resumeLinks.items.email]
+kind = "email"
+url = "mailto:YOUR_EMAIL@example.invalid"
+text = "YOUR_EMAIL@example.invalid"
+label = "Email YOUR_NAME"
+
+[params.resumeLinks.items.linkedin]
+kind = "linkedin"
+url = "https://YOUR_PROFILE.example.invalid/"
+text = "LinkedIn"
+label = "View LinkedIn profile"
+
+[params.resumeLinks.items.github]
+kind = "github"
+url = "https://YOUR_CODE_PROFILE.example.invalid/"
+text = "GitHub"
+label = "View GitHub profile"
 
 [params.summary]
 enable = true
@@ -232,16 +257,3 @@ name = "YOUR_INTEREST_2"
 
 [[params.interests.list]]
 name = "YOUR_INTEREST_3"
-
-[params.social]
-enable = true
-
-[[params.social.list]]
-icon = "fab fa-linkedin"
-url = "https://YOUR_PROFILE.example.invalid/"
-title = "YOUR_PROFESSIONAL_PROFILE"
-
-[[params.social.list]]
-icon = "fab fa-github-square"
-url = "https://YOUR_CODE_PROFILE.example.invalid/"
-title = "YOUR_CODE_PROFILE"

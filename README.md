@@ -85,13 +85,13 @@ git submodule update --init -- themes/cvnewtheme
 Replace the placeholder values in `config.toml` and `static/`, then run:
 
 ```bash
-hugo server
+hugo server --panicOnWarning
 ```
 
 Create a production build with:
 
 ```bash
-hugo --gc --minify
+hugo --gc --minify --panicOnWarning
 ```
 
 Keep `params.seo.robots = "noindex, nofollow"` until the content and production URL are ready.
@@ -104,7 +104,7 @@ Netlify accesses the private `cvitals` repository through its GitHub App. It acc
 2. Authorize the Netlify GitHub App to access the private `cvitals` repository, then select that repository.
 3. Set the production branch to `dev`. The committed `netlify.toml` provides:
 
-   - Build command: `hugo --gc --minify --baseURL "$URL"`
+   - Build command: `hugo --gc --minify --panicOnWarning --baseURL "$URL"`
    - Publish directory: `public`
    - Hugo version: `0.164.0`
 
@@ -118,17 +118,32 @@ Never commit an SSH private key, access token, or Netlify deploy key to either r
 
 ## Update the theme
 
-Push theme changes to `cvnewtheme` first. Then update the commit pinned by `cvitals`:
+Fully verify, commit, and push theme changes to `cvnewtheme` first. Record the
+exact 40-character commit SHA that passed the theme and adjacent-consumer
+checks. Pin `cvitals` to that verified commit rather than resolving a moving
+branch tip:
 
 ```bash
 cd /path/to/cvitals
-git submodule update --remote --checkout themes/cvnewtheme
+theme_sha="<verified-40-character-cvnewtheme-commit-sha>"
+git submodule update --init -- themes/cvnewtheme
+git -C themes/cvnewtheme fetch origin "$theme_sha"
+git -C themes/cvnewtheme checkout --detach "$theme_sha"
+test "$(git -C themes/cvnewtheme rev-parse HEAD)" = "$theme_sha"
+
+hugo --renderToMemory \
+  --cacheDir /tmp/cvitals-submodule-hugo-cache \
+  --gc --ignoreCache --minify --panicOnWarning --noBuildLock
+
 git add themes/cvnewtheme
+git diff --cached --submodule=log -- themes/cvnewtheme
 git commit -m "Update cvnewtheme"
 git push origin dev
 ```
 
-Netlify redeploys only after `cvitals` records and pushes the new submodule commit.
+The detached checkout is intentional: the superproject gitlink records the
+verified commit exactly. Netlify redeploys only after `cvitals` records and
+pushes that gitlink.
 
 ## Preview
 
